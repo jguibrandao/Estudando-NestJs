@@ -20,7 +20,7 @@ export class CoursesService {
         return this.courses.find((course: Course) => course.id === Number(id))
     }
 
-    create(createCourseDto: any) {
+    create(createCourseDto: Course) {
         this.courses.push(createCourseDto)
     }
 
@@ -38,7 +38,7 @@ export class CoursesService {
         )
         
         if(indexCourse >= 0) {
-            this.courses.splice(indexCourse)
+            this.courses.splice(indexCourse, 1)
         }
         
     }
