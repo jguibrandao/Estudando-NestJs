@@ -23,7 +23,7 @@ export class CoursesService {
         } else return course
     }
 
-    create(createCourseDto: Course) {
+    create(createCourseDto: any) {
         this.courses.push(createCourseDto)
     }
 
